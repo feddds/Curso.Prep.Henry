@@ -1,0 +1,65 @@
+variables, son cajitas donde se guardan cosas y estas cajitas tienen un nombre que las identifica. que podemos guardar en las cajitas? bueno texto o números.
+strings, son esas oraciones que deberán guardarse entre comillas.
+funciones, son justamente eso, una función tiene una "funcion" xq realizar, un fin. requiere argumentos que los usa para completar su trabajo. generalmente usa la palabra "return" para retornar su resultado y finalizar lo que se le encargó.
+if, es la opción que tenemos para decirle al codigo si sigue por acá o por allá dependiendo una condición que se debe evaluar. 
+booleanos, true y false, son los valores de verdadero y falso en español, y representan dos situaciones diferentes. True si es verdad lo que se evalua y false si es verdadero. Ej, si 2>1 es verdadero y se ejecuta la porción de codigo correspondiente, si 2<1, sera falso y el código hara otra cosa.
+
+
+git status
+En la rama master
+Tu rama está adelantada a 'origin/master' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificados:     02-JS-I/homework/homework.js
+	modificados:     package-lock.json
+	modificados:     package.json
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	feddds-desarrollo
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+feddds@feddds-M740TU-N-M760TU-N-W7X0TUN:~/Escritorio/Curso.Prep.Henry$ git add  02-JS-I/homework/homework.js
+feddds@feddds-M740TU-N-M760TU-N-W7X0TUN:~/Escritorio/Curso.Prep.Henry$ git status
+En la rama master
+Tu rama está adelantada a 'origin/master' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	modificados:     02-JS-I/homework/homework.js
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificados:     package-lock.json
+	modificados:     package.json
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	feddds-desarrollo
+
+feddds@feddds-M740TU-N-M760TU-N-W7X0TUN:~/Escritorio/Curso.Prep.Henry$ git commint -m "tarea 02js terminada"
+git: 'commint' no es un comando de git. Mira 'git --help'.
+
+El comando más similar es
+	commit
+feddds@feddds-M740TU-N-M760TU-N-W7X0TUN:~/Escritorio/Curso.Prep.Henry$ git commit -m "tarea 02js terminada"
+[master 5be4a80] tarea 02js terminada
+ 1 file changed, 142 insertions(+), 37 deletions(-)
+feddds@feddds-M740TU-N-M760TU-N-W7X0TUN:~/Escritorio/Curso.Prep.Henry$ git push https://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@github.com/feddds/Curso.Prep.Henry.git
+Enumerando objetos: 9, listo.
+Contando objetos: 100% (9/9), listo.
+Compresión delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (5/5), 1.77 KiB | 904.00 KiB/s, listo.
+Total 5 (delta 2), reusado 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/feddds/Curso.Prep.Henry.git
+   892ba44..5be4a80  master -> master
+feddds@feddds-M740TU-N-M760TU-N-W7X0TUN:~/Escritorio/Curso.Prep.Henry$ 
+
+
