@@ -4,6 +4,22 @@ funciones, son justamente eso, una función tiene una "funcion" xq realizar, un 
 if, es la opción que tenemos para decirle al codigo si sigue por acá o por allá dependiendo una condición que se debe evaluar. 
 booleanos, true y false, son los valores de verdadero y falso en español, y representan dos situaciones diferentes. True si es verdad lo que se evalua y false si es verdadero. Ej, si 2>1 es verdadero y se ejecuta la porción de codigo correspondiente, si 2<1, sera falso y el código hara otra cosa.
 
+---
+
+ciclo for, es una forma de hacer que la compu haga los mismo hasta que encuentre una condición que se cumpla, ejeucte ese codigo y de por termidado el ciclo en forma inmediata.
+
+&&, operador Y, es decir que si sos bonito y tenes 12 años, dara Verdadero y ejecutara el codigo entre llaves.
+||, operador OR, con solo ser bonito o tener 12 años ya alcanzaria para ejecuta el codigo de las llaves. 
+!, operador NO, hara lo contrario al operador que lo sucede, si decis !bonito, sería no bonito y se ejecutará el codigo correspondiente.
+
+---
+
+git status
+git add  02-JS-I/homework/homework.js
+git commint -m "tarea 02js terminada"
+git push https://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@github.com/feddds/Curso.Prep.Henry.git
+
+---
 
 git status
 En la rama master
