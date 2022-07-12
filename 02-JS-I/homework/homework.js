@@ -131,7 +131,7 @@ obtenerResto(43, 2);
 
 
 
-function esPar(num) {
+function esPar(n) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
