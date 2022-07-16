@@ -45,11 +45,14 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var nuevoArray = [];
   i=0;
   while (i<array.length){
-    console.log(array[i]+1);
+    nuevoArray.push(array[i]+1);
+    // nuevoArray[i] = array[i] + 1;  --> también se puede hacer así.
     i++;
   }
+return nuevoArray;
 }
 incrementarPorUno([1,12,35]);
 
@@ -60,7 +63,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
 array.push(elemento);
-console.log(array);
+return array;
 }
 agregarItemAlFinalDelArray([1,null,'soy'], 'fabi')
 
@@ -70,12 +73,12 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-console.log(array);
 array.unshift(elemento);
-console.log(array);
+return array;
 
 }
 agregarItemAlComienzoDelArray([2579, 'gllen'], 'gutierrez');
+
 
 function dePalabrasAFrase(palabras) {
   // "palabras" es un array de strings/cadenas
@@ -84,9 +87,10 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
 
-console.log(palabras[1] + ' ' + palabras[0] + ' ' + palabras[2]);
-}
+return palabras[2] + ' ' + palabras[0] + ' ' + palabras[1];
+//return palabras.join(" ");
 
+}
 dePalabrasAFrase(['Hola', 'Amigos', 'Como están!'])
 
 
@@ -94,14 +98,13 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  i=0;
-  while (i<array.length){
-    //no hace falta hacer if y else siempre, con un if solo alcanza para evaluar.
-    if (array[i] === elemento){
-      return true
-    }
-    i++
-    } 
+        i=0;
+        while (i<array.length){
+          //no hace falta hacer if y else siempre, con un if solo alcanza para evaluar.
+          if (array[i] === elemento){
+            return true
+        }  i++
+        } 
     // el return false puede ir luego de iterar y no encontrar un elemento igual
     return false; 
   }
@@ -113,12 +116,14 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
 //console.log(numeros[0]+numeros[1]+numeros[2]);
-var i=0;
-var suma=0;
-while (i<numeros.length){
-  suma=suma + numeros[i];
-  i++;
-} console.log(suma)
+      var i=0;
+      var suma=0;
+      
+      while (i<numeros.length){
+        suma=suma + numeros[i];
+        i++;
+      } 
+      return suma;
 }
 agregarNumeros([1,2,7])
 
@@ -127,14 +132,16 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var i=0;
-  var suma=0;
-  
-  while (i < resultadosTest.length) {
-    //console.log(resultadosTest[i]);
-    suma =  suma + resultadosTest[i];
-    i++;
-    } console.log(suma/i);
+        var i=0;
+        var suma=0;
+        
+        while (i < resultadosTest.length) {
+          //console.log(resultadosTest[i]);
+          suma =  suma + resultadosTest[i];
+          i++;
+          } 
+
+  return (suma/i);
       
 }
 promedioResultadosTest([2,5,8])
@@ -145,15 +152,26 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-if (numeros[0] > numeros[1] && numeros[0] > numeros[2]) {
+/*if (numeros[0] > numeros[1] && numeros[0] > numeros[2]) {
   console.log("soy el mayor", numeros[0])
 } else if (numeros[1] > numeros[2]) {
   console.log("soy el mayor", numeros[1])
 } else {
   console.log("soy el mayor", numeros[2])
+}*/
+
+var max = numeros[0] //aca esta variable almacena el primer item del array
+
+    for (var i=0; i<numeros.length; i++) {
+    
+        if ( numeros[i] > max )
+
+          max = numeros[i]
+
+    }
+return max;
 }
-  //console.log(numeros[0])
-}
+
 numeroMasGrande([10,76,19]);
 
 
@@ -161,15 +179,33 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-if ( arguments.length === 0) {
-  console.log("0");
-  } else if (arguments.length === 1) {
-    console.log(arguments[0]);
-  } else {
-  console.log(arguments[0]*arguments[1])
+
+
+
+if (arguments.length === 0) {
+  return 0;
+} 
+if (arguments.length === 1 ) {
+  return arguments [0];
+
 }
+
+var resul=1;
+  
+for (var i=0; i<arguments.length; i++) {
+
+// ojo el error fue que hice como una suma y no cuando multiplica arranca en 1 la variable y se va guardando.
+resul = resul * arguments[i] 
+
+         
 }
-multiplicarArgumentos(9,2000000);
+return resul;
+
+
+}
+multiplicarArgumentos(5,10,20);
+
+
 
 
 function cuentoElementos(arreglo){
@@ -385,32 +421,29 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
 
-var nuevoArray = [];
+var nuevoArray=[];
+var suma = numero;
 
-        for (var i=0; i<=10; i++) {
+for (var i=0; i<10; i++) {
 
-        console.log("iterador:",i, "/// acumulador: ", numero);
+  console.log(i)
 
+  if (i===5) {
+  console.log("Continue?...arranca el bucle de nuevo, encontes no suma.")
+    continue;
+  // corta el bucle y lo arranca sin seguir
 
-                if (i===5) {
+  }
 
-                //console.log("Continua porron", numero)
-                continue;
-                
-                
-                } else {
-                
-                numero = numero + 2;
-                nuevoArray.push(numero);
+console.log("Entro a la suma")
+suma = suma + 2;
+nuevoArray.push(suma);
 
+}
 
-        
-        }
-        
-        }
 return nuevoArray;
 }
-continueStatement(6);
+continueStatement(10);
 
 
 
